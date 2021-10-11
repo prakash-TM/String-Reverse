@@ -1,4 +1,4 @@
-## String Reverse in JS
+## String Reverse without reverse the numbers in JS
 
 ## Question :
 

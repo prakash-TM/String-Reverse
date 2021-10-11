@@ -26,27 +26,32 @@
 
 
 const reverseWords = (str) => {
-    var arr = [];
-    arr = str + "1";
-    var it_str = "";
-    var rev = "";
+    if (str.length !== 0) {
+
+        var arr = [];
+        arr = str + "1";
+        var it_str = "";
+        var rev = "";
 
 
-    for (let x in arr) {
-        if (arr[x] >= 'a' && arr[x] <= 'z') {
-            it_str += arr[x];
+        for (let x in arr) {
+            if ((arr[x] >= 'a' && arr[x] <= 'z') || (arr[x] >= 'A' && arr[x] <= 'Z')) {
+                it_str += arr[x];
 
-        } else {
-            var spl = it_str.split("");
-            var rev_arr = spl.reverse();
-            var res = rev_arr.join("");
-            rev += res;
-            it_str = "";
-            rev += arr[x];
+            } else {
+                var spl = it_str.split("");
+                var rev_arr = spl.reverse();
+                var res = rev_arr.join("");
+                rev += res;
+                it_str = "";
+                rev += arr[x];
+            }
         }
+        rev = rev.substring(0, rev.length - 1);
+        return rev;
+    } else {
+        console.log("Empty")
     }
-    rev = rev.substring(0, rev.length - 1);
-    return rev;
 
 };
 
